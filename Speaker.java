@@ -1,4 +1,4 @@
-class Telivision{
+class Speaker{
 
 	static boolean isConnected 	= false;
 	static int     maxVolume   	= 7;
@@ -7,21 +7,22 @@ class Telivision{
 	 
 	public static boolean onOrOff(){
 	
-	//ref = Condition? value1: value2;
-  isConnected = (isConnected == false)? true : false;
+	if(!isConnected) isConnected=true;
+		//System.out.println("Speaker has turned on..");
 	
-	/*if(!isConnected) isConnected=true;
-		
-	else  isConnected=false;*/
+	
+	else  isConnected=false;
+		//System.out.println("Speaker has turned off..");
+	
 	
 	return isConnected;
 	} 
 	
 	public static void increaseVolume(){
 		System.out.println("increaseVolume started");
-		if(isConnected ){
+		if(isConnected){
 			if(currentVolume<maxVolume){
-				currentVolume = currentVolume++;
+				currentVolume++;
 				System.out.println("current volume is "+currentVolume);
 			}
 			else{
@@ -29,17 +30,17 @@ class Telivision{
 			}
 		}
 		else{
-			System.out.println("please turn on the Tv");
+			System.out.println("please turn on the speaker");
 		}
 		System.out.println("increaseVolume ended");
 	return ;	
 	}
 	
 	public static void decreaseVolume(){
-		System.out.println("decreaseVolume started");
+		System.out.println("decrease Volume started");
 		if(isConnected){
 			if(currentVolume>minVolume){
-				 currentVolume = currentVolume-- ;
+				currentVolume--;
 				System.out.println("current volume is "+currentVolume);
 			}
 			else{
@@ -47,9 +48,9 @@ class Telivision{
 			}
 		}
 		else{
-			System.out.println("please turn on the TV");
+			System.out.println("please turn on the speaker");
 		}
-		System.out.println("decreaseVolume ended");
+		System.out.println("decrease Volume ended");
 	return ;	
 	}
 }
