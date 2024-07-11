@@ -4,10 +4,10 @@ class TelivisionRunner{
   
   System.out.println("Start of main");
   
-  Telivision.turnOn();
-  Telivision.turnOff();
-  Telivision.turnOn();
-  Telivision.turnOff();
+  boolean connect = Telivision.onOrOff();
+  System.out.println("Telivision is" + connect);
+  connect = Telivision.onOrOff();
+  System.out.println("Telivision is" + connect);
   System.out.println("End of main");
   }
   

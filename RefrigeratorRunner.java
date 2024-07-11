@@ -4,10 +4,10 @@ class RefrigeratorRunner{
    
    System.out.println("Main started");
    
-   Refrigerator.turnOn();
-   Refrigerator.turnOff();
-   Refrigerator.turnOn();
-   Refrigerator.turnOff();
+   boolean connect = Refrigerator.onOrOff();
+  System.out.println("Refrigerator is " + connect);
+   connect = Refrigerator.onOrOff();
+  System.out.println("Refrigerator is " + connect);
    
    System.out.println("Main ended");   
    

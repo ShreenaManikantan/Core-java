@@ -4,10 +4,10 @@ class FanRunner{
    
    System.out.println("main started");
    
-   Fan.turnOn();
-   Fan.turnOff();
-   Fan.turnOn();
-   Fan.turnOff();
+   boolean connect = Fan.onOrOff();
+    System.out.println("Fan is " + connect);  
+   connrct = Fan.onOrOff();
+   System.out.println("Fan is connect");
    
    System.out.println("main ended");
    }
