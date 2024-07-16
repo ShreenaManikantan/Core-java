@@ -1,90 +1,77 @@
 class Swiggy{
 
+   static double getPrice = 0.0;
    public static double search(String foodName){
-   double getPrice = 0.0;
-   if(foodName == "chiken fry"){
-    getPrice =199.00 ;
-    return getPrice;
-	}
-	if(foodName == "mutton khaima"){
-    getPrice = 233.00;
-    return getPrice;
-	}
-	if(foodName == "chiken 65"){
-    getPrice = 260.00;
-    return getPrice;
-	}
-	if(foodName == "lemon chiken"){
-    getPrice = 543.00;
-    return getPrice;
-	}
-	if(foodName == "kabab" ){
-    getPrice = 274.00;
-    return getPrice;
-	}
-	if(foodName == "dragon chiken"){
-    getPrice = 549.00;
-    return getPrice;
-	}
-	if(foodName == "egg pepper dry "){
-    getPrice = 300.00;
-    return getPrice;
-	}
-	if(foodName == "chiken pepper masala"){
-    getPrice = 384.00;
-    return getPrice;
-	}
-	if(foodName == "chiken biriyani "){
-    getPrice = 647.00;
-    return getPrice;
-	}
-	if(foodName == "mutton biriyani" ){
-    getPrice = 399.00;
-    return getPrice;
-	}
-	if(foodName == "chiken tikka" ){
-    getPrice = 419.00;
-    return getPrice;
-	}
-	if(foodName == "kaal soup" ){
-    getPrice = 2849.00;
-    return getPrice;
-	}
-	if(foodName == "panner pepper dry "){
-    getPrice = 378.00;
-    return getPrice;
-	}
-	if(foodName == "panner tikka masala "){
-    getPrice =393.00;
-    return getPrice;
-	}
-	if(foodName == "panipuri" ){
-    getPrice = 210.00;
-    return getPrice;
-	}
-	if(foodName == "gobi manchuri "){
-    getPrice = 369.00;
-    return getPrice;
-	}
-	if(foodName == "gobi 65 "){
-    getPrice = 544.00;
-    return getPrice;
-	}
-	if(foodName == "shawarma" ){
-    getPrice = 360.00;
-    return getPrice;
-	}
-	if(foodName == "chiken gravy "){
-    getPrice = 397.00;
-    return getPrice;
-	}
-	if(foodName == "chiken lollypop"){
-    getPrice = 395.00;
-    return getPrice;
-	}
-	else{
+
+   if(foodName == "chiken fry")
+   return getPrice =199.00 ;
+    
+	if(foodName == "mutton khaima")
+   return getPrice = 233.00;
+    
+	if(foodName == "chiken 65")
+   return getPrice = 260.00;
+    
+	if(foodName == "lemon chiken")
+   return getPrice = 543.00;
+    
+	if(foodName == "kabab" )
+   return getPrice = 274.00;
+    
+	if(foodName == "dragon chiken")
+   return getPrice = 549.00;
+    
+	if(foodName == "egg pepper dry ")
+   return getPrice = 300.00;
+    
+	if(foodName == "chiken pepper masala")
+   return getPrice = 384.00;
+   
+	if(foodName == "chiken biriyani ")
+   return getPrice = 647.00;
+   
+	if(foodName == "mutton biriyani" )
+    return getPrice = 399.00;
+   
+	if(foodName == "chiken tikka" )
+    return getPrice = 419.00;
+    
+	if(foodName == "kaal soup" )
+    return getPrice = 2849.00;
+    
+	if(foodName == "panner pepper dry ")
+    return getPrice = 378.00;
+    
+	if(foodName == "panner tikka masala ")
+    return getPrice =393.00;
+    
+	if(foodName == "panipuri" )
+    return getPrice = 210.00;
+    
+	if(foodName == "gobi manchuri ")
+    return getPrice = 369.00;
+   
+	if(foodName == "gobi 65 ")
+    return getPrice = 544.00;
+    
+	if(foodName == "shawarma" )
+    return getPrice = 360.00;
+    
+	if(foodName == "chiken gravy ")
+    return getPrice = 397.00;
+    
+	if(foodName == "chiken lollypop")
+    return getPrice = 395.00;
+   
+	else
     System.out.println(foodName + " Not found");
      return 0.0;
     }
+	 public static double search(String foodName,int quantity){
+     quantity = 3;
+	 if(foodName == "chiken lollypop") return getPrice = 395.00*3;
+	 else{
+	 return getPrice = 0.0;
+	 }
    }
  }
