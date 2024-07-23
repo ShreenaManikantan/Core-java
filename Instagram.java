@@ -1,6 +1,6 @@
 class Instagram{
 
-   static long num;
+   
    static String mail;
    static String name;
    static String dob;
@@ -8,17 +8,61 @@ class Instagram{
    static String confirm;
    
    
-  public static boolean createUserAccount(long contactNumber, String email, String userName, String dateOfBirth, String password, String confirmPassword) {
+  public static boolean createUserAccount( String email, String userName, String dateOfBirth, String password, String confirmPassword) {
  
    boolean isAccountCreated = false;
    
-   num = contactNumber;
-   mail = email;
-   name = userName;
-   dob = dateOfBirth;
-   pass = password;
-   confirm = confirmPassword;
+   boolean isMailidValid = false;
+   boolean isUserNameValid = false;
+   boolean isDateOfBirthValid = false;
+   boolean isPasswordValid = false;
+   boolean isConfirmPasswordValid = false;
+  
    
+    if(email!= null){
+   mail = email;
+   isMailidValid = true;
+   }
+   else
+	   System.out.println("email is invalid");
+   
+   
+    if(userName!= null){
+   name = userName;
+   isUserNameValid = true;
+   }
+   else
+	   System.out.println("user Name is invalid");
+   
+   
+    if(dateOfBirth!= null){
+    dob = dateOfBirth;
+   isDateOfBirthValid = true;
+   }
+   else
+	   System.out.println("dateOfBirth is invalid");
+   
+   
+    if(password!= null){
+    pass = password;
+   isPasswordValid = true;
+   }
+   else
+	   System.out.println("password is invalid");
+   
+   
+    if(confirmPassword!= null){
+    confirm = confirmPassword;
+   isConfirmPasswordValid = true;
+   }
+   else
+	   System.out.println("comform password is invalid");
+   
+ 
+   //if(isContactNumberValid==true && isMailidValid==&& isUserNameValid==&& isDateOfBirthValid==true && isPasswordValid==true && isConfirmPasswordValid==true)
+   if (isMailidValid==true && isUserNameValid==true && isDateOfBirthValid==true && isPasswordValid==true && isConfirmPasswordValid==true) 
+    
+
    isAccountCreated = true;
    return isAccountCreated;
    }
@@ -26,7 +70,6 @@ class Instagram{
    public static void readUserAccountDetails(){
 	
    System.out.println("Details of user is...");
-   System.out.println("The contact number of the user is: "+ num);
    System.out.println("The email id of user is: " + mail);
    System.out.println("The user name is: " + name);
    System.out.println("The date of birth user is: " +dob);
