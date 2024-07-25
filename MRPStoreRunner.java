@@ -36,6 +36,17 @@ class MRPStoreRunner{
   System.out.println("is alcohol Name added "+isAlcoholAdded);
   
   MRPStore.showAlcoholNameList();
+  
+  boolean isAlcoholUpdated = MRPStore.updateAlcoholName("cider","Cognac");
+  System.out.println("is alcohol name updated "+ isAlcoholUpdated);
+	
+  MRPStore.showAlcoholNameList();
+	
+  boolean isAlcoholDeleted = MRPStore.deleteAlcoholName("Whisky");
+  System.out.println("is alcohol name deleted " +isAlcoholDeleted );
+
+  MRPStore.showAlcoholNameList();
+
   }
 
 }

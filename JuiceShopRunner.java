@@ -24,6 +24,16 @@ class JuiceShopRunner{
 	juiceAdded = JuiceShop.addJuiceName("avacado shake");
 	System.out.println("is juice name added " + juiceAdded);
 	
+	JuiceShop.showJuiceName();	
+	
+	boolean juiceUpdated = JuiceShop.updateJuiceName("papaya juice","chikku juice");
+	System.out.println("is Juice name updated "+ juiceUpdated);
+
+	JuiceShop.showJuiceName();	
+	
+	boolean juiceDeleted = JuiceShop.deleteJuiceName("lemon juice");
+	System.out.println("is Juice name deleted " +juiceDeleted );
+	
 	JuiceShop.showJuiceName();
 	}
 

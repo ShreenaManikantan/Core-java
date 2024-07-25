@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class MRPStore{
 
   static String alcoholNames[]= {null,null,null,null,null,null,null,null,null,null};
@@ -8,6 +10,7 @@ class MRPStore{
  boolean isAlcoholNameAdded = false;
  
   if(index<alcoholNames.length){
+	  //validation
   if(alcoholName!=null){
   alcoholNames[index++]=alcoholName;
   isAlcoholNameAdded=true;
@@ -29,5 +32,42 @@ class MRPStore{
   
   System.out.println("main started");
   
+  }
+  public static boolean updateAlcoholName(String newAlcoholName,String oldAlcoholName){
+	  System.out.println("update alcoholName stated");
+	 boolean isAlcoholNameUpdated=false;
+	  for(int position=0;position<alcoholNames.length;position++ ){
+		  if(alcoholNames[position]==oldAlcoholName){
+			  alcoholNames[position]=newAlcoholName;
+			  isAlcoholNameUpdated = true; 
+		  }
+  }
+	      if(isAlcoholNameUpdated==false)
+		  System.out.println(oldAlcoholName +"not found");
+	 
+	 System.out.println("update alcoholName ended");
+	 return isAlcoholNameUpdated;
+  }
+  
+  public static boolean deleteAlcoholName(String alcoholName){
+	  
+	  boolean isAlcoholNameDeleted = false;
+	  int position,newPosition;
+	  for(position=0,newPosition=0;position<alcoholNames.length;position++){
+		  if(alcoholNames[position]!= alcoholName){
+			  alcoholNames[newPosition] = alcoholNames[position];
+               newPosition++;
+		  }
+		  else 
+			  isAlcoholNameDeleted= true;
+	  }
+	  int newLength= newPosition;
+	  alcoholNames =Arrays.copyOf(alcoholNames,newLength);
+	  
+	  if(isAlcoholNameDeleted==false){
+		  System.out.println(alcoholName +"not found");
+		  
+	  }
+		return isAlcoholNameDeleted;  
   }
 }
