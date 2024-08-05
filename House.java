@@ -21,4 +21,12 @@ class House{
    
    }
    
+  public void displayInfo(){
+   System.out.println("The house id is "+houseId);
+   System.out.println("The number of rooms is "+noOfRooms);
+   System.out.println("The number of Flors is "+noOfFlors);
+   System.out.println("The number of Members is "+noOfMembers);
+   System.out.println("The house name is "+houseName);
+   }
+   
 }

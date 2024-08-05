@@ -6,7 +6,7 @@ class Country{
    String primeMinister;
    String population;
    
-     public Country(){
+   public Country(){
    
    System.out.println("Country object is created");
   
@@ -19,5 +19,12 @@ class Country{
   this.population = population;
   
   }
-
+  public void displayInfo(){
+   System.out.println("The country Name is "+countryName);
+   System.out.println("The country Id is "+countryId);
+   System.out.println("The no of States is "+noOfStates);
+   System.out.println("The prime Minister is "+primeMinister);
+   System.out.println("The population is "+population);
+   }
+  
 }
